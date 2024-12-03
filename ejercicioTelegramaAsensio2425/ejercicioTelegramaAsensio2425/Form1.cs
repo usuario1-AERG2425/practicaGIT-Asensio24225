@@ -30,8 +30,8 @@ namespace ejercicioTelegramaAsensio2425
             double coste = 0;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
-            // telegrama urgente?
-            if (chkUrgente.Checked)
+//AERG-2425.Cambiamos el checkboton por el redioboton
+            if (rbUrgente.Checked)
             {
                 tipoTelegrama = 'u';
             }
@@ -41,19 +41,21 @@ namespace ejercicioTelegramaAsensio2425
 
             numPalabras = textoTelegrama.Split(' ', '.', ':', ';').Length;
 
-
-            //Si el telegrama es ordinario
-            if (tipoTelegrama == 'o')
+            if (rbOrdinario.Checked)
             {
-                if (numPalabras <= 10)
+                //Si el telegrama es ordinario
+                if (tipoTelegrama == 'o')
                 {
-                    coste = 2.5;
-                }
-                else
-                {
- //!? AERG-2425.Cambiamos la formula del coste con el enunciado dado.
-                    coste = 2.5 + 0.5 * (numPalabras - 10);
-                   // coste = 0.5 * numPalabras;
+                    if (numPalabras <= 10)
+                    {
+                        coste = 2.5;
+                    }
+                    else
+                    {
+                        //!? AERG-2425.Cambiamos la formula del coste con el enunciado dado.
+                        coste = 2.5 + 0.5 * (numPalabras - 10);
+                        // coste = 0.5 * numPalabras;
+                    }
                 }
             }
             else
