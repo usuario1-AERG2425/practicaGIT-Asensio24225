@@ -20,9 +20,14 @@ namespace ejercicioTelegramaAsensio2425
         private void btnCalcularPrecio_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+//AERG-2425 Leo el telegrama
+            textoTelegrama = txtTelegrama.Text;
+
+ //AERG-2425 Añado la letra o para telegrama ordinario
+            char tipoTelegrama = 'o';
             int numPalabras = 0;
-            double coste;
+//AERG-2425 Iniciamos el valor coste a 0
+            double coste = 0;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
@@ -31,7 +36,12 @@ namespace ejercicioTelegramaAsensio2425
                 tipoTelegrama = 'u';
             }
             //Obtengo el número de palabras que forma el telegrama
-            numPalabras = textoTelegrama.Length;
+            //numPalabras = textoTelegrama.Length;
+//!? AERG-2425.Se añade esta funcion para que nos cuente las palabras y nos discrimine los caracteres y espacios.
+
+            numPalabras = textoTelegrama.Split(' ', '.', ':', ';').Length;
+
+
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
             {
@@ -41,7 +51,9 @@ namespace ejercicioTelegramaAsensio2425
                 }
                 else
                 {
-                    coste = 0.5 * numPalabras;
+ //!? AERG-2425.Cambiamos la formula del coste con el enunciado dado.
+                    coste = 2.5 + 0.5 * (numPalabras - 10);
+                   // coste = 0.5 * numPalabras;
                 }
             }
             else
@@ -64,6 +76,7 @@ namespace ejercicioTelegramaAsensio2425
                 }
             }
             txtPrecio.Text = coste.ToString() + " euros";
+
         }
     }
 }

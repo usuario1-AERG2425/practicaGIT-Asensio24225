@@ -66,7 +66,7 @@
             // 
             // btnCalcularPrecio
             // 
-            this.btnCalcularPrecio.Location = new System.Drawing.Point(629, 324);
+            this.btnCalcularPrecio.Location = new System.Drawing.Point(480, 324);
             this.btnCalcularPrecio.Name = "btnCalcularPrecio";
             this.btnCalcularPrecio.Size = new System.Drawing.Size(112, 47);
             this.btnCalcularPrecio.TabIndex = 3;
@@ -79,7 +79,7 @@
             this.txtTelegrama.Location = new System.Drawing.Point(45, 43);
             this.txtTelegrama.Multiline = true;
             this.txtTelegrama.Name = "txtTelegrama";
-            this.txtTelegrama.Size = new System.Drawing.Size(668, 182);
+            this.txtTelegrama.Size = new System.Drawing.Size(556, 185);
             this.txtTelegrama.TabIndex = 4;
             // 
             // txtPrecio
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(661, 456);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtTelegrama);
             this.Controls.Add(this.btnCalcularPrecio);
