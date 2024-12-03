@@ -48,12 +48,14 @@ namespace ejercicioTelegramaAsensio2425
                 {
                     if (numPalabras <= 10)
                     {
-                        coste = 2.5;
+        //AERG-2425.cambio precio de 2.5 a 3 €                 
+                        coste = 3;
+                        //coste = 2.5;
                     }
                     else
                     {
                         //!? AERG-2425.Cambiamos la formula del coste con el enunciado dado.
-                        coste = 2.5 + 0.5 * (numPalabras - 10);
+                        coste = 3 + 0.5 * (numPalabras - 10);
                         // coste = 0.5 * numPalabras;
                     }
                 }
@@ -65,11 +67,13 @@ namespace ejercicioTelegramaAsensio2425
                 {
                     if (numPalabras <= 10)
                     {
-                        coste = 5;
+   //AERG-2425.cambio precio de 5 a 6 €
+                        coste = 6;
+                        //coste = 5;
                     }
                     else
                     {
-                        coste = 5 + 0.75 * (numPalabras - 10);
+                        coste = 6 + 0.75 * (numPalabras - 10);
                     }
                 }
                 else
